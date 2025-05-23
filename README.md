@@ -40,4 +40,40 @@ Aplicativo backend que gera **dietas personalizadas** utilizando **inteligência
 }
 ```
 
-## 
+## ⚙️ Como Rodar Localmente
+### 📱 Mobile (React Native)
+
+```bash
+# Clone o projeto
+git clone https://github.com/seuusuario/seurepositorio.git
+
+# Acesse a pasta
+cd mobile
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npx expo start
+```
+
+### 🖥️ Backend (API Node)
+
+```bash
+# Acesse a pasta do backend
+cd backend
+
+# Instale as dependências
+npm install
+
+# Rode o servidor
+npx tsx src/server.ts
+```
+
+### ⚠️ Importante:
+- Ajuste o IP no arquivo server/api.ts para o IP local da sua máquina rodando o backend:
+```ts
+export const api = axios.create({
+  baseURL: "http://SEU_IP_LOCAL:3333",
+});
+```
